@@ -22,8 +22,6 @@ public:
   Toy(std::string const &);
   virtual	~Toy();
   virtual void	isTaken() = 0;
-  void	setWrap(bool);
-  bool	getWrap();
 };
 
 #endif /* !TOY_HH_ */

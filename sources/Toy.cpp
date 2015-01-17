@@ -21,13 +21,3 @@ Toy::~Toy()
 void	Toy::isTaken()
 {
 }
-
-void	Toy::setWrap(bool a)
-{
-  this->wrap = a;
-}
-
-bool	Toy::getWrap()
-{
-  return (this->wrap);
-}
