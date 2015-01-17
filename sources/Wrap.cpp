@@ -14,11 +14,15 @@ Wrap::~Wrap()
 
 void Wrap::wrapMeThat(Object *obj)
 {
-	if (this->_obj == NULL)
+	if (this->_obj == NULL || obj == NULL)
 	{
 		this->_obj = obj;
 		std::cout << "tuuuut tuuut tuut" << std::endl;
 		this->isOpen = false;
+	}
+	else
+	{
+		std::cout << "The object to wrap doesn't exist, or there is already an object in the wrap." << std::endl;
 	}
 }
 
@@ -33,5 +37,9 @@ Object *Wrap::getObj()
 	{
 		return (this->_obj);
 	}
-	return (NULL);
+	else
+	{
+		std::cout << "Wrap is closed and the object can't be get." << std::endl;
+		return (NULL);
+	}
 }
