@@ -1,15 +1,29 @@
 #include <iostream>
 #include <string>
 
+#include "Object.hh"
 #include "Teddy.hh"
 #include "LittlePony.hh"
 
+Object **MyUnitTests()
+{
+  Object **obj = new Object*[2];
+
+  obj[0] = new LittlePony("gay pony");
+  obj[1] = new Teddy("bisounours");
+
+  return (obj);
+}
+
 int main(void)
 {
-  Teddy tmp("toto");
-  LittlePony tmp2("truc");
+  Object **obj = MyUnitTests();
 
-  tmp.isTaken();
-  tmp2.isTaken();
+  LittlePony *lp = (LittlePony *)obj[0];
+  Teddy *t = (Teddy *)obj[1];
+
+  lp->isTaken();
+  t->isTaken();
+
   return (0);
 }
