@@ -16,8 +16,8 @@
 class	LittlePony : public Toy
 {
 public:
-	LittlePony();
-	~LittlePony();
+  LittlePony();
+  ~LittlePony();
   void	isTaken();
 };
 
