@@ -5,7 +5,7 @@
 ** Login   <mathon_j@mathonj>
 ** 
 ** Started on  Sat Jan 17 14:02:54 2015 Jérémy MATHON
-** Last update Sat Jan 17 14:11:48 2015 Jérémy MATHON
+** Last update Sat Jan 17 14:45:52 2015 Jérémy MATHON
 */
 
 #ifndef LITTLEPONY_HH_
@@ -16,7 +16,7 @@
 class	LittlePony : public Toy
 {
 public:
-  LittlePony();
+  LittlePony(std::string const &);
   ~LittlePony();
   void	isTaken();
 };
