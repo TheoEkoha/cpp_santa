@@ -7,6 +7,7 @@
 #include "Wrap.hh"
 #include "Box.hh"
 #include "GiftPaper.hh"
+#include "Table.hh"
 
 Object **MyUnitTests()
 {
@@ -31,13 +32,30 @@ Object *MyUnitTests(Object **toMake)
   return (gp);
 }
 
+ITable *createTable()
+{
+  return new TablePePeNoel;
+}
+
 int main(void)
 {
   Object **obj = MyUnitTests();
 
   LittlePony *lp = (LittlePony *)obj[0];
   Teddy *t = (Teddy *)obj[1];
+  ITable *theTruc = createTable();
+  const std::string **myTab;
+  theTruc->addObj(new Teddy("Beer"));
+  theTruc->addObj(new Teddy("Pokemon"));
+  theTruc->addObj(new LittlePony("Jeremy"));
 
+  myTab = theTruc->Look();
+  int i = 0;
+  while (myTab[i])
+    {
+      std::cout << *myTab[i] << std::endl;
+      i++;
+    }
   lp->isTaken();
   t->isTaken();
 

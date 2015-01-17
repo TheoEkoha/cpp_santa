@@ -5,7 +5,7 @@
 // Login   <kinoo_m@epitech.net>
 // 
 // Started on  Sat Jan 17 18:58:33 2015 Martin Kinoo
-// Last update Sat Jan 17 22:59:53 2015 Martin Kinoo
+// Last update Sat Jan 17 23:34:35 2015 Martin Kinoo
 //
 
 #include	"Table.hh"
@@ -27,7 +27,24 @@ TablePePeNoel::TablePePeNoel() : ITable::ITable()
     }
 }
 
-bool	TablePePeNoel::addObj(Object *newObj)
+bool	TablePePeNoel::Take(size_t index)
+{
+  if (index >= 10)
+    {
+      std::cout << "Hoho, i'm out of the table.." << std::endl;
+      return false;
+    }
+  if (objTab[index])
+    {
+      std::cout << "I take 1 " << objTab[index]->getTitle() << " from the table at pos " << index << std::endl;
+      objTab[index] = NULL;
+      return true;
+    }
+  std::cout << "There isn't any object at pos " << index << std::endl;
+  return false;
+}
+
+bool	TablePePeNoel::Put(Object *newObj)
 {
   int	i = 0;
 
@@ -64,7 +81,11 @@ const std::string	**TablePePeNoel::Look()
 	}
       i++;
     }
-  ret[j] = NULL;
+  while (j < 10)
+    {
+      ret[j] = NULL;
+      j++;
+    }
   if (!j)
     {
       std::cout << "Hoho, there isn't any object on the table.." << std::endl;

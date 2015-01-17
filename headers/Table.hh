@@ -5,7 +5,7 @@
 // Login   <kinoo_m@epitech.net>
 // 
 // Started on  Sat Jan 17 18:51:18 2015 Martin Kinoo
-// Last update Sat Jan 17 22:59:04 2015 Martin Kinoo
+// Last update Sat Jan 17 23:29:29 2015 Martin Kinoo
 //
 
 #ifndef		_TABLE_HH_
@@ -17,7 +17,8 @@ class		ITable
 {
 public:
   virtual ~ITable();
-  virtual bool addObj(Object *) = 0;
+  virtual bool Put(Object *) = 0;
+  virtual bool Take(size_t) = 0;
   virtual const std::string **Look() = 0;
 };
 
@@ -27,7 +28,8 @@ private:
   Object *objTab[10];
 public:
   TablePePeNoel();
-  bool addObj(Object *);
+  bool Take(size_t);
+  bool Put(Object *);
   const std::string **Look();
 };
 
