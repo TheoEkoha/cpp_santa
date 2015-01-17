@@ -16,6 +16,7 @@ SRCS		=	main.cpp \
 			$(SRCS_PATH)Wrap.cpp \
 			$(SRCS_PATH)Box.cpp \
 			$(SRCS_PATH)GiftPaper.cpp \
+			$(SRCS_PATH)Table.cpp \
 
 OBJS		=	$(SRCS:.cpp=.o)
 
