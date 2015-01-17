@@ -5,7 +5,7 @@
 ** Login   <mathon_j@mathonj>
 ** 
 ** Started on  Sat Jan 17 14:05:45 2015 Jérémy MATHON
-** Last update Sat Jan 17 14:44:23 2015 Jérémy MATHON
+** Last update Sat Jan 17 15:31:42 2015 Jérémy MATHON
 */
 
 #ifndef TOY_HH_
@@ -19,7 +19,7 @@ class	Toy : public Object
 public:
   Toy(std::string const &);
   virtual	~Toy();
-  virtual void	isTaken();
+  virtual void	isTaken() = 0;
 };
 
 #endif /* !TOY_HH_ */
