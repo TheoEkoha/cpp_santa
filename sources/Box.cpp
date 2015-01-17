@@ -1,5 +1,10 @@
 #include "Box.hh"
 
+Box::Box() : Wrap("Box")
+{
+
+}
+
 void Box::closeMe()
 {
 	if (this->isOpen == false)

@@ -4,6 +4,7 @@
 #include "Object.hh"
 #include "Teddy.hh"
 #include "LittlePony.hh"
+#include "Wrap.hh"
 #include "Box.hh"
 #include "GiftPaper.hh"
 
@@ -47,6 +48,9 @@ int main(void)
   obj[2] = new GiftPaper;
   obj[3] = NULL;
   
+  std::cout << obj[1]->getTitle() << std::endl;
+  std::cout << obj[2]->getTitle() << std::endl;
+
   MyUnitTests(obj);
 
   return (0);

@@ -9,8 +9,8 @@ protected:
 	Object *_obj;
 	bool isOpen;
 public:
-	Wrap();
-	~Wrap();
+	Wrap(const std::string &);
+	virtual ~Wrap();
 	void wrapMeThat(Object *);
 	void openMe();
 	virtual void closeMe() = 0;

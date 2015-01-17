@@ -15,8 +15,6 @@
 
 class	Toy : public Object
 {
-protected:
-  const std::string	title;
 public:
   Toy(std::string const &);
   virtual	~Toy();

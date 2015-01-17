@@ -6,6 +6,7 @@
 class GiftPaper : public Wrap
 {
 public:
+	GiftPaper();
 	void closeMe();
 };
 

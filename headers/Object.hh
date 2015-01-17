@@ -16,9 +16,12 @@
 
 class	Object
 {
+protected:
+	const std::string title;
 public:
-  Object();
+  Object(const std::string &);
   virtual ~Object();
+  const std::string &getTitle() const;
 };
 
 #endif /* !OBJECT_HH_ */

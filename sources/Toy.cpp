@@ -10,14 +10,10 @@
 
 #include	"Toy.hh"
 
-Toy::Toy(std::string const &name) : title(name)
+Toy::Toy(std::string const &name) : Object(name)
 {
 }
 
 Toy::~Toy()
-{
-}
-
-void	Toy::isTaken()
 {
 }

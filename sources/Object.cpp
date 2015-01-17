@@ -10,10 +10,16 @@
 
 #include	"Object.hh"
 
-Object::Object()
+Object::Object(const std::string &tit) : title(tit)
 {
+
 }
 
 Object::~Object()
 {
+}
+
+const std::string &Object::getTitle() const
+{
+	return (this->title);
 }

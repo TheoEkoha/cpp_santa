@@ -1,6 +1,6 @@
 #include "Wrap.hh"
 
-Wrap::Wrap()
+Wrap::Wrap(const std::string &tit) : Object(tit)
 {
 	this->_obj = NULL;
 	this->isOpen = false;
