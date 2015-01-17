@@ -17,6 +17,7 @@ void Wrap::wrapMeThat(Object *obj)
 	{
 		this->_obj = obj;
 		std::cout << "tuuuut tuuut tuut" << std::endl;
+		this->isOpen = false;
 	}
 }
 
