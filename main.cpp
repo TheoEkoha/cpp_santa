@@ -45,10 +45,11 @@ int main(void)
   Teddy *t = (Teddy *)obj[1];
   ITable *theTruc = createTable();
   const std::string **myTab;
-  theTruc->addObj(new Teddy("Beer"));
-  theTruc->addObj(new Teddy("Pokemon"));
-  theTruc->addObj(new LittlePony("Jeremy"));
+  theTruc->Put(new Teddy("Beer"));
+  theTruc->Put(new Teddy("Pokemon"));
+  theTruc->Put(new LittlePony("Jeremy"));
 
+  theTruc->Take(1);
   myTab = theTruc->Look();
   int i = 0;
   while (myTab[i])
