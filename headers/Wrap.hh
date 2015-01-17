@@ -13,6 +13,7 @@ public:
 	~Wrap();
 	void wrapMeThat(Object *);
 	void openMe();
+	virtual void closeMe() = 0;
 	Object *getObj();	
 };
 

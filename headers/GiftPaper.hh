@@ -5,7 +5,8 @@
 
 class GiftPaper : public Wrap
 {
-	
+public:
+	void closeMe();
 };
 
 #endif
