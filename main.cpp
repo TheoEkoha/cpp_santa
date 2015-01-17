@@ -4,6 +4,8 @@
 #include "Object.hh"
 #include "Teddy.hh"
 #include "LittlePony.hh"
+#include "Box.hh"
+#include "GiftPaper.hh"
 
 Object **MyUnitTests()
 {
@@ -17,9 +19,15 @@ Object **MyUnitTests()
 
 Object *MyUnitTests(Object **toMake)
 {
-  toMake = toMake;
+  Teddy *ted = (Teddy *)toMake[0];
+  Box *box = (Box *)toMake[1];
+  GiftPaper *gp = (GiftPaper *)toMake[2];
 
-  return (NULL);
+  box->openMe();
+  box->wrapMeThat(ted);
+  gp->wrapMeThat(box);
+
+  return (gp);
 }
 
 int main(void)
@@ -31,6 +39,15 @@ int main(void)
 
   lp->isTaken();
   t->isTaken();
+
+  obj = new Object*[4];
+
+  obj[0] = new Teddy("bisounours");
+  obj[1] = new Box;
+  obj[2] = new GiftPaper;
+  obj[3] = NULL;
+  
+  MyUnitTests(obj);
 
   return (0);
 }
