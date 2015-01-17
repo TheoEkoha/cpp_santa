@@ -6,10 +6,10 @@
 
 int main(void)
 {
-	Teddy tmp();
-	LittlePony tmp2();
+  Teddy tmp("toto");
+  LittlePony tmp2("truc");
 
-	tmp.isTaken();
-	tmp2.isTaken();
+  tmp.isTaken();
+  tmp2.isTaken();
   return (0);
 }
