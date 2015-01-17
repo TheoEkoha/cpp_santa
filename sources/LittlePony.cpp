@@ -5,12 +5,12 @@
 ** Login   <mathon_j@mathonj>
 ** 
 ** Started on  Sat Jan 17 14:10:36 2015 Jérémy MATHON
-** Last update Sat Jan 17 14:14:08 2015 Jérémy MATHON
+** Last update Sat Jan 17 14:35:01 2015 Jérémy MATHON
 */
 
 #include	"LittlePony.hh"
 
-LittlePony::LittlePony()
+LittlePony::LittlePony(std::string const &name) : Toy(name)
 {
 
 }

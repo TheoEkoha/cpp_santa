@@ -5,7 +5,7 @@
 ** Login   <mathon_j@mathonj>
 ** 
 ** Started on  Sat Jan 17 14:05:16 2015 Jérémy MATHON
-** Last update Sat Jan 17 14:33:14 2015 Jérémy MATHON
+** Last update Sat Jan 17 14:35:13 2015 Jérémy MATHON
 */
 
 #ifndef TEDDY_HH_
@@ -15,7 +15,6 @@
 
 class	Teddy : public Toy
 {
-  const std::string	title;
 public:
   Teddy();
   ~Teddy();
