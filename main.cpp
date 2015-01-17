@@ -15,6 +15,13 @@ Object **MyUnitTests()
   return (obj);
 }
 
+Object *MyUnitTests(Object **toMake)
+{
+  toMake = toMake;
+
+  return (NULL);
+}
+
 int main(void)
 {
   Object **obj = MyUnitTests();
