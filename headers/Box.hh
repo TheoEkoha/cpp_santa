@@ -3,6 +3,11 @@
 
 #include "Wrap.hh"
 
-
+class Box : public Wrap
+{
+public:
+	void closeMe();
+	void wrapMeThat(Object *obj);
+};
 
 #endif

@@ -17,7 +17,6 @@ class	Toy : public Object
 {
 protected:
   const std::string	title;
-  bool			wrap;
 public:
   Toy(std::string const &);
   virtual	~Toy();

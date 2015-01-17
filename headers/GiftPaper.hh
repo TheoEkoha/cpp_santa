@@ -3,6 +3,9 @@
 
 #include "Wrap.hh"
 
-
+class GiftPaper : public Wrap
+{
+	
+};
 
 #endif

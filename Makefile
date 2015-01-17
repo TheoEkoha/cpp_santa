@@ -13,6 +13,9 @@ SRCS		=	main.cpp \
 			$(SRCS_PATH)Object.cpp \
 			$(SRCS_PATH)Teddy.cpp \
 			$(SRCS_PATH)Toy.cpp \
+			$(SRCS_PATH)Wrap.cpp \
+			$(SRCS_PATH)Box.cpp \
+			$(SRCS_PATH)GiftPaper.cpp \
 
 OBJS		=	$(SRCS:.cpp=.o)
 

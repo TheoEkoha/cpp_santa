@@ -10,7 +10,7 @@
 
 #include	"Toy.hh"
 
-Toy::Toy(std::string const &name) : title(name), warp(false)
+Toy::Toy(std::string const &name) : title(name)
 {
 }
 
