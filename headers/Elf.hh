@@ -2,6 +2,7 @@
 # define _ELF_HH_
 
 #include "Object.hh"
+#include "Wrap.hh"
 #include "Table.hh"
 #include "ConveyorBelt.hh"
 
