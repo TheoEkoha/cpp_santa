@@ -4,7 +4,6 @@ Wrap::Wrap(const std::string &tit) : Object(tit)
 {
 	this->_obj = NULL;
 	this->isOpen = false;
-	std::cout << "whistles while working" << std::endl;
 }
 
 Wrap::~Wrap()

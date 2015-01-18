@@ -22,6 +22,7 @@ bool Elf::TakeTable(size_t pos)
 			&& this->_wrap == NULL) 
 		{
 			this->_wrap = (Wrap *)tmp;
+			std::cout << "whistles while working" << std::endl;
 			return (true);
 		}
 		else if (this->_obj == NULL)
@@ -58,6 +59,7 @@ bool Elf::TakeCB()
 			&& this->_wrap == NULL) 
 		{
 			this->_wrap = (Wrap *)tmp;
+			std::cout << "whistles while working" << std::endl;
 			return (true);
 		}
 		else if (this->_obj == NULL)
@@ -99,4 +101,26 @@ bool Elf::wrapMeThat()
 		}
 	}
 	return (false);
+}
+
+void Elf::openMe(int type)
+{
+	if (type == WRAP && this->_wrap != NULL)
+		this->_wrap->openMe();
+	else if (this->_obj != NULL && (this->_obj->getTitle() == "Box" || this->_obj->getTitle() == "GiftPaper"))
+	{
+		Wrap *tmp = (Wrap *)this->_obj;
+		tmp->openMe();
+	}
+}
+
+void Elf::closeMe(int type)
+{
+	if (type == WRAP && this->_wrap != NULL)
+		this->_wrap->closeMe();
+	else if (this->_obj != NULL && (this->_obj->getTitle() == "Box" || this->_obj->getTitle() == "GiftPaper"))
+	{
+		Wrap *tmp = (Wrap *)this->_obj;
+		tmp->closeMe();
+	}
 }
