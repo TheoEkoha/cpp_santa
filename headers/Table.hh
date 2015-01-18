@@ -5,7 +5,7 @@
 // Login   <kinoo_m@epitech.net>
 // 
 // Started on  Sat Jan 17 18:51:18 2015 Martin Kinoo
-// Last update Sat Jan 17 23:29:29 2015 Martin Kinoo
+// Last update Sun Jan 18 02:30:04 2015 Martin Kinoo
 //
 
 #ifndef		_TABLE_HH_
