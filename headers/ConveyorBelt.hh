@@ -5,7 +5,7 @@
 // Login   <kinoo_m@epitech.net>
 // 
 // Started on  Sun Jan 18 01:25:23 2015 Martin Kinoo
-// Last update Sun Jan 18 05:27:16 2015 Martin Kinoo
+// Last update Sun Jan 18 05:31:30 2015 Martin Kinoo
 //
 
 #ifndef		_CONVEYOR_BELT_HH_
@@ -24,7 +24,7 @@ public:
   virtual bool OUT() = 0;
   virtual bool Put(Wrap *) = 0;
   virtual Wrap *Take() = 0;
-  virtual const std::string &Look() = 0;
+  virtual const std::string *Look() = 0;
 };
 
 class		ConveyorBeltPePeNoel : public IConveyorBelt
@@ -37,7 +37,7 @@ public:
   bool		OUT();
   bool Put(Wrap *);
   Wrap *Take();
-  const std::string	&Look();
+  const std::string	*Look();
 };
 
 #endif

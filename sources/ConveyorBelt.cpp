@@ -5,7 +5,7 @@
 // Login   <kinoo_m@epitech.net>
 // 
 // Started on  Sun Jan 18 02:18:12 2015 Martin Kinoo
-// Last update Sun Jan 18 05:27:04 2015 Martin Kinoo
+// Last update Sun Jan 18 05:31:56 2015 Martin Kinoo
 //
 
 #include	<cstdlib>
@@ -54,11 +54,11 @@ bool		ConveyorBeltPePeNoel::OUT()
   return true;
 }
 
-const std::string	&ConveyorBeltPePeNoel::Look()
+const std::string	*ConveyorBeltPePeNoel::Look()
 {
   if (!myWrap)
     return NULL;
-  return myWrap->getTitle();
+  return &(myWrap->getTitle());
 }
 
 bool		ConveyorBeltPePeNoel::Put(Wrap *newWrap)
