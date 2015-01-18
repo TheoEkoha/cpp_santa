@@ -11,7 +11,7 @@ protected:
 public:
 	Wrap(const std::string &);
 	virtual ~Wrap();
-	void wrapMeThat(Object *);
+	virtual void wrapMeThat(Object *);
 	void openMe();
 	virtual void closeMe() = 0;
 	Object *getObj();	
