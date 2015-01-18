@@ -10,8 +10,11 @@ class IElf
 {
 public:
 	virtual ~IElf() {}
-	virtual bool Take() = 0;
-	virtual bool Put() = 0;
+	virtual bool TakeTable() = 0;
+	virtual bool TakeCB() = 0;
+	virtual bool PutTable() = 0;
+	virtual bool PutCB() = 0;
+	virtual bool wrapMeThat() = 0;
 };
 
 class Elf : public IElf
@@ -28,6 +31,7 @@ public:
 	bool PutTable(int);
 	bool TakeCB();
 	bool PutCB(int);
+	bool wrapMeThat();
 };
 
 enum objType

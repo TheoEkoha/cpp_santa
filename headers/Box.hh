@@ -8,7 +8,7 @@ class Box : public Wrap
 public:
 	Box();
 	void closeMe();
-	void wrapMeThat(Object *obj);
+	bool wrapMeThat(Object *obj);
 };
 
 #endif

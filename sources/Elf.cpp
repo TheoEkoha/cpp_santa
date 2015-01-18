@@ -87,3 +87,16 @@ bool Elf::PutCB(int type)
 	}
 	return (false);
 }
+
+bool Elf::wrapMeThat()
+{
+	if (this->_wrap != NULL && this->_obj != NULL)
+	{
+		if (this->_wrap->wrapMeThat(this->_obj))
+		{
+			this->_obj = NULL;
+			return (true);
+		}
+	}
+	return (false);
+}

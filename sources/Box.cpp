@@ -12,10 +12,11 @@ void Box::closeMe()
 	this->isOpen = false;
 }
 
-void Box::wrapMeThat(Object *obj)
+bool Box::wrapMeThat(Object *obj)
 {
 	if (this->isOpen == true)
-		Wrap::wrapMeThat(obj);
+		return (Wrap::wrapMeThat(obj));
 	else
 		std::cout << "Box is closed and can't be used to wrap anything." << std::endl;
+	return (false);
 }
