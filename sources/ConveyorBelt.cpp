@@ -5,7 +5,7 @@
 // Login   <kinoo_m@epitech.net>
 // 
 // Started on  Sun Jan 18 02:18:12 2015 Martin Kinoo
-// Last update Sun Jan 18 04:42:44 2015 Martin Kinoo
+// Last update Sun Jan 18 05:07:59 2015 Martin Kinoo
 //
 
 #include	<cstdlib>
@@ -44,7 +44,11 @@ bool		ConveyorBeltPePeNoel::OUT()
       std::cout << "I have to press IN button before OUT button, I forget every time.." << std::endl;
       return false;
     }
-  std::cout << "I send you a " << myWrap->getTitle() << ", Santa !" << std::endl;
+  std::cout << "I send you a " << myWrap->getTitle() << ", Santa !" << std::endl << " Santa says: ";
+  if (!(myWrap->getObj()))
+    std::cout << "you send me an empty wrap, stupid elf !!" << std::endl;
+  else
+    std::cout << "and one more gift for a wise child, good job elf !!" << std::endl;
   delete myWrap;
   myWrap = NULL;
   return true;
