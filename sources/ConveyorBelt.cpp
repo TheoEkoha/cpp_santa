@@ -5,7 +5,7 @@
 // Login   <kinoo_m@epitech.net>
 // 
 // Started on  Sun Jan 18 02:18:12 2015 Martin Kinoo
-// Last update Sun Jan 18 05:07:59 2015 Martin Kinoo
+// Last update Sun Jan 18 05:27:04 2015 Martin Kinoo
 //
 
 #include	<cstdlib>
@@ -18,14 +18,14 @@ ConveyorBeltPePeNoel::ConveyorBeltPePeNoel() : myWrap(new GiftPaper)
 IConveyorBelt::~IConveyorBelt()
 {}
 
-Wrap		*ConveyorBeltPePeNoel::IN()
+bool		ConveyorBeltPePeNoel::IN()
 {
   bool		isBox;
 
   if (myWrap)
     {
       std::cout << "I don't have to press on IN, there is already a warp on my conveyor belt" << std::endl;
-      return NULL;
+      return false;
     }
   srand(time(NULL));
   isBox = rand() % 2;
@@ -34,7 +34,7 @@ Wrap		*ConveyorBeltPePeNoel::IN()
   else
     myWrap = new GiftPaper;
   std::cout << "The conveyor belt give me a " << myWrap->getTitle() << " !" << std::endl;
-  return myWrap;
+  return true;
 }
 
 bool		ConveyorBeltPePeNoel::OUT()
