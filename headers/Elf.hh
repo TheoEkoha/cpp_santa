@@ -17,9 +17,13 @@ public:
 	virtual bool wrapMeThat() = 0;
 	virtual void openMe(int) = 0;
 	virtual void closeMe(int) = 0;
+	virtual void IN() = 0;
+	virtual void OUT() = 0;
+	virtual const std::string **LookTable() = 0;
+	virtual const std::string *LookCB() = 0;
 };
 
-class Elf : public IElf
+class ElfPePeNoel : public IElf
 {
 protected:
 	ITable *_table;
@@ -27,8 +31,8 @@ protected:
 	Object *_obj;
 	Wrap *_wrap;
 public:
-	Elf(ITable *, IConveyorBelt *);
-	~Elf();
+	ElfPePeNoel(ITable *, IConveyorBelt *);
+	~ElfPePeNoel();
 	bool TakeTable(size_t);
 	bool PutTable(int);
 	bool TakeCB();
@@ -36,6 +40,10 @@ public:
 	bool wrapMeThat();
 	void openMe(int);
 	void closeMe(int);
+	void IN();
+	void OUT();
+	const std::string **LookTable();
+	const std::string *LookCB();
 };
 
 enum objType

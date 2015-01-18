@@ -1,6 +1,6 @@
 #include "Elf.hh"
 
-Elf::Elf(ITable *table, IConveyorBelt *cb)
+ElfPePeNoel::ElfPePeNoel(ITable *table, IConveyorBelt *cb)
 {
 	this->_table = table;
 	this->_cb = cb;
@@ -8,12 +8,12 @@ Elf::Elf(ITable *table, IConveyorBelt *cb)
 	this->_wrap = NULL;
 }
 
-Elf::~Elf()
+ElfPePeNoel::~ElfPePeNoel()
 {
 
 }
 
-bool Elf::TakeTable(size_t pos)
+bool ElfPePeNoel::TakeTable(size_t pos)
 {
 	Object *tmp = this->_table->Take(pos);
 	if (tmp != NULL)
@@ -36,7 +36,7 @@ bool Elf::TakeTable(size_t pos)
 	return (false);
 }
 
-bool Elf::PutTable(int type)
+bool ElfPePeNoel::PutTable(int type)
 {
 	Object *tmp = (type == WRAP ? this->_wrap : this->_obj);
 	if (this->_table->Put(tmp) == true)
@@ -50,7 +50,7 @@ bool Elf::PutTable(int type)
 	return (false);
 }
 
-bool Elf::TakeCB()
+bool ElfPePeNoel::TakeCB()
 {
 	Object *tmp = this->_cb->Take();
 	if (tmp != NULL)
@@ -73,7 +73,7 @@ bool Elf::TakeCB()
 	return (false);
 }
 
-bool Elf::PutCB(int type)
+bool ElfPePeNoel::PutCB(int type)
 {
 	if (type == WRAP && this->_wrap != NULL 
 		&& this->_cb->Put(this->_wrap) == true)
@@ -90,7 +90,7 @@ bool Elf::PutCB(int type)
 	return (false);
 }
 
-bool Elf::wrapMeThat()
+bool ElfPePeNoel::wrapMeThat()
 {
 	if (this->_wrap != NULL && this->_obj != NULL)
 	{
@@ -103,7 +103,7 @@ bool Elf::wrapMeThat()
 	return (false);
 }
 
-void Elf::openMe(int type)
+void ElfPePeNoel::openMe(int type)
 {
 	if (type == WRAP && this->_wrap != NULL)
 		this->_wrap->openMe();
@@ -114,7 +114,7 @@ void Elf::openMe(int type)
 	}
 }
 
-void Elf::closeMe(int type)
+void ElfPePeNoel::closeMe(int type)
 {
 	if (type == WRAP && this->_wrap != NULL)
 		this->_wrap->closeMe();
@@ -123,4 +123,24 @@ void Elf::closeMe(int type)
 		Wrap *tmp = (Wrap *)this->_obj;
 		tmp->closeMe();
 	}
+}
+
+void ElfPePeNoel::IN()
+{
+	this->_cb->IN();
+}
+
+void ElfPePeNoel::OUT()
+{
+	this->_cb->OUT();
+}
+
+const std::string **ElfPePeNoel::LookTable()
+{
+	return (this->_table->Look());
+}
+
+const std::string *ElfPePeNoel::LookCB()
+{
+	return (this->_cb->Look());
 }
